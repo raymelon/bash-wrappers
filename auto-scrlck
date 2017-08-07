@@ -1,12 +1,12 @@
 
 # run every hour
-watch --interval=3600
+#watch --interval 3600 
 
 # toggle scroll lock to activate keyboard backlighting
 # if current hour is: 
 # 	between 6PM to 11PM or
 #	between 12AM to 6AM
-if [[ $(10#$(date +'%H')) -gt 18 ]] || [[ $(10#$(date +'%H')) -lt 6 ]]
+if [[ $((10#$(date +'%H'))) -gt 18 ]] || [[ $((10#$(date +'%H'))) -lt 6 ]]
 then
 	xset led named 'Scroll Lock'
 	echo 'Scroll Lock now ON.'
