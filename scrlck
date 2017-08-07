@@ -1,0 +1,19 @@
+
+led_status=$(xset -q | grep Scroll)
+led_status="$(echo $led_status| cut -d ':' -f 7)"
+
+#echo $led_status
+#echo "$led_status" == "on"
+
+if [[ "$led_status" == " off" ]]
+then
+	xset led named 'Scroll Lock'
+	echo 'Scroll Lock now ON.'
+
+elif [[ "$led_status" == " on" ]]
+then
+	xset -led named 'Scroll Lock'
+	echo 'Scroll Lock now OFF.'
+else
+	echo 'Fuck'
+fi
