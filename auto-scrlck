@@ -21,7 +21,7 @@ while true; do
 	# sunrise
 	if [[ current_hr -eq six_am ]]; then
 
-		$next_check = 43200 # 12 hrs in s
+		next_check=43200 # 12 hrs in s
 		#watch -x --interval $next_check -c xset -led named 'Scroll Lock'
 		xset -led named 'Scroll Lock'
 		#watch -x --interval $next_check -c auto-scrlck
@@ -32,7 +32,7 @@ while true; do
 	# sunset
 	elif [[ current_hr -eq six_pm ]]; then
 
-		$next_check = 43200 # 12 hrs in s
+		next_check=43200 # 12 hrs in s
 		#watch -x --interval $next_check -c xset led named 'Scroll Lock'
 		xset led named 'Scroll Lock'
 		#watch -x --interval $next_check -c auto-scrlck
