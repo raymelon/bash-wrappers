@@ -26,7 +26,7 @@ while true; do
 		xset -led named 'Scroll Lock'
 		#watch -x --interval $next_check -c auto-scrlck
 
-		echo 'Next check at ' ', ' $next_check ' from now.'
+		echo 'Next check at' $(date -d "now + $next_check seconds")',' 'approx' $(($next_check/60/60)) 'hrs from now.'
 		sleep $next_check
 
 	# sunset
