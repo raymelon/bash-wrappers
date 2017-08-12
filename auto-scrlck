@@ -69,8 +69,9 @@ while true; do
 	# after sunset till before sunrise
 	elif [[ current_hr -gt six_pm ]]; then
 
-		hrs_to_twelve_am=$(($((10#12*60 + 10#0)) - $((10#$current_hr*60 + 10#$current_min))))
-		min_to_six=$(($hrs_to_twelve_am + $((10#6*60 + 10#0))))
+		hrs_to_twelve_am=$(($((10#24*60 + 10#0)) - $((10#$current_hr*60 + 10#$current_min))))
+		min_to_six=$(($((10#$hrs_to_twelve_am + 10#0)) + $((10#6*60 + 10#0))))
+
 		next_check=$(($min_to_six * 60))
 
 		#watch -x --interval $next_check -c xset led named 'Scroll Lock'
