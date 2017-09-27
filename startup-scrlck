@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ `date +%H` -ge 6 ] && [ `date +%H` -lt 18 ]; then
+	xset -led named 'Scroll Lock'
+else
+	xset led named 'Scroll Lock'
+fi
