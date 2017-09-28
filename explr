@@ -1,2 +1,4 @@
 #!/bin/bash
+# open a path on pantheon file explorer
+
 xdg-open $@

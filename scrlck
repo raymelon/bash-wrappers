@@ -1,4 +1,5 @@
 #!/bin/bash
+# scroll lock setter
 
 led_status=$(xset -q | grep Scroll)
 led_status="$(echo $led_status| cut -d ':' -f 7)"

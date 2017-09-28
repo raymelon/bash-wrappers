@@ -1,2 +1,4 @@
 #!/bin/bash
+# list files on the Trash
+
 ls  ~/.local/share/Trash/files/

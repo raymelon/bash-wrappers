@@ -1,3 +1,4 @@
 #!/bin/bash
+# opens a file with default pdf viewer
 
 evince $@

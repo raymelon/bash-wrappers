@@ -1,3 +1,4 @@
 #!/bin/bash
+# add scroll lock map
 
 xmodmap -e 'add mod3 = Scroll_Lock'

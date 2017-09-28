@@ -1,4 +1,5 @@
 #!/bin/bash
+# show a live timer
 while true;
 do
 	echo -ne "`date +%H:%M:%S:%N`\r";

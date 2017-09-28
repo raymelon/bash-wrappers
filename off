@@ -1,2 +1,4 @@
 #!/bin/bash
+# turn off screen
+
 xset dpms force off
